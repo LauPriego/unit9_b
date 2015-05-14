@@ -34,10 +34,6 @@ public class Alumno
         	System.out.println("ha ocurrido una excepcion" + e);
             return false;
         }
-        finally
-        {
-        	
-        }
         
         
         int indice = (int) (ldni % 23);

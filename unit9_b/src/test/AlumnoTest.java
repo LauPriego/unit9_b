@@ -34,10 +34,10 @@ public class AlumnoTest {
 		assertEquals(resultadoEsperado, resultadoObtenido);
 	}
 	@Test
-	public void testValidaNif3() 
+	public void testValidaNif3()
 	{
 		Alumno a = new Alumno(); 
-		String nif = "7HHH444K";
+		String nif = "7HHH444K4";
 		
 		boolean resultadoEsperado = false;
 		boolean resultadoObtenido = a.validaNif(nif);
@@ -47,7 +47,7 @@ public class AlumnoTest {
 	public void testValidaNif4() 
 	{
 		Alumno a = new Alumno(); 
-		String nif = "";
+		String nif = null; 
 		
 		boolean resultadoEsperado = false;
 		boolean resultadoObtenido = a.validaNif(nif);
