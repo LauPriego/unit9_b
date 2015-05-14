@@ -11,7 +11,7 @@ public class Alumno
 {
     public boolean validaNif(String nif) 
     {
-        if (nif.length() != 9 || nif == null) 
+        if ( nif == null || nif.length() != 9 )
         {
             return false;
         }
@@ -23,23 +23,26 @@ public class Alumno
         Pattern pattern = Pattern.compile("[0-9]{8,8}");
         Matcher matcher = pattern.matcher(dni);
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-        long ldni = 0;
+        long ldni = 0; 
         
-        
-        
-        try 
+        try  
         {
             ldni = Long.parseLong(dni);
         } 
         catch (NumberFormatException e) 
         {
+        	System.out.println("ha ocurrido una excepcion" + e);
             return false;
+        }
+        finally
+        {
+        	
         }
         
         
         int indice = (int) (ldni % 23);
         char letraEsperada = letras.charAt(indice);
-        return matcher.matches() && letra == letraEsperada;
+        return matcher.matches() && letra == letraEsperada; 
     }  
     
     
@@ -50,7 +53,7 @@ public class Alumno
         float tasa = 500.00f;
         
         
-        if ((edad < 25) && (!familiaNumerosa)&& (repetidor)) 
+        if ((edad < 25) && (!familiaNumerosa)&& (repetidor))
         {
             tasa = tasa + 1500.00f;
         } 
