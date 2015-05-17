@@ -53,6 +53,16 @@ public class AlumnoTest {
 		boolean resultadoObtenido = a.validaNif(nif);
 		assertEquals(resultadoEsperado, resultadoObtenido);
 	}
+	@Test
+	public void testValidaNif5() 
+	{
+		Alumno a = new Alumno(); 
+		String nif = "29194741G"; 
+		
+		boolean resultadoEsperado = false;
+		boolean resultadoObtenido = a.validaNif(nif);
+		assertEquals(resultadoEsperado, resultadoObtenido);
+	}
 
 	
 	

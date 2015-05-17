@@ -38,7 +38,7 @@ public class Alumno
         
         int indice = (int) (ldni % 23);
         char letraEsperada = letras.charAt(indice);
-        return matcher.matches() && letra == letraEsperada;
+        return matcher.matches() && letra == letraEsperada; 
     }  
     
     
