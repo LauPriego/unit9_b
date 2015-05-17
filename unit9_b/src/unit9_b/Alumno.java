@@ -38,7 +38,7 @@ public class Alumno
         
         int indice = (int) (ldni % 23);
         char letraEsperada = letras.charAt(indice);
-        return matcher.matches() && letra == letraEsperada; 
+        return matcher.matches() && letra == letraEsperada;
     }  
     
     
@@ -49,7 +49,7 @@ public class Alumno
         float tasa = 500.00f;
         
         
-        if ((edad < 25) && (!familiaNumerosa)&& (repetidor))
+        if ((edad < 25) && (!familiaNumerosa) && (repetidor))
         {
             tasa = tasa + 1500.00f;
         } 

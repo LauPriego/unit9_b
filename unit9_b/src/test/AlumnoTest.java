@@ -118,5 +118,17 @@ public class AlumnoTest {
 		float resultadoObtenido = a.calculaTasaMatricula(edad, familiaNumerosa, repetidor);
 		assertTrue(resultadoEsperado == resultadoObtenido);
 	}
+	@Test
+	public void testCalculaTasaMatricula6() 
+	{
+		Alumno a = new Alumno(); 
+		int edad = 23;
+		boolean familiaNumerosa = true;
+		boolean repetidor = false;
+		
+		float resultadoEsperado = 250;
+		float resultadoObtenido = a.calculaTasaMatricula(edad, familiaNumerosa, repetidor);
+		assertTrue(resultadoEsperado == resultadoObtenido);
+	}
 
 }
